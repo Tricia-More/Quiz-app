@@ -23,7 +23,9 @@ const Quiz = () => {
   return (
     <div className="quiz-app">
       <div className="quiz">
-        <h1>Quiz App</h1>
+        {/* <h1>Quiz App</h1> */}
+        {!showResult && <h3>(Question {currentQuestion +1} / {questions.length})</h3>}
+        
         {showResult ? (
           <Result score={score} total={questions.length} />
         ) : (
